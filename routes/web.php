@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComunaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/comunas', [ComunaController::class, 'index'])
+Route::get('/comunas', [ComunaController::class, 'index'])->name('comunas.index');
