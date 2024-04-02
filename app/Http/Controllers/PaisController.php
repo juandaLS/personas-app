@@ -73,7 +73,11 @@ class PaisController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pais = Pais::find($id);
+        $municipios = DB::table('tb_municipio')
+        ->orderBy('muni_nomb')
+        ->get();
+        return view('pais.edit' , ['pais'  => $pais, 'municipios' => $municipios]);
     }
 
     /**
