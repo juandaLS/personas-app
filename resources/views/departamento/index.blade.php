@@ -40,6 +40,15 @@
                    <input class="btn btn-danger" type="submit" value="delete">
                 </form>
                 </td>
+                <a href=" {{ route('departamentos.edit' , ['departamento'=>$departamento->depa_codi]) }} " 
+                    class=" btn btn-info"> Edit </a></li>
+
+                  <form action="{{ route('departamentos.destroy', ['departamento' =>$departamento->depa_codi]) }}"
+                    method="POST" style="display: inline-back">
+                    @method('delete')
+                    @csrf
+                   <input class="btn btn-danger" type="submit" value="delete">
+                </form>
           </tr>
           @endforeach
         </tbody>
