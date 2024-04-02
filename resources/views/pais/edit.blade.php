@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <h1>Edit Pais</h1>
-       <form method="POST" action="{{ route("paises.update" , ['pais' => $pais->pais_codi]) }}">
+       <form method="POST" action="{{ route('paises.update' , ['pais' => $pais->pais_codi]) }}">
         @method('put')
         @csrf
         <div class="mb-3">

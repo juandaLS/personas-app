@@ -16,7 +16,7 @@
     <div class="container">
       
        <h1>Add Departamentos</h1>
-       <form method="POST" action="{{ route("departamentos.store") }}">
+       <form method="POST" action="{{ route('departamentos.store') }}">
         @csrf
         <div class="mb-3">
           <label for="id" class="form-label">Code</label>
